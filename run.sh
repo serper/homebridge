@@ -2,14 +2,16 @@
 
 sed -i "s/rlimit-nproc=3/#rlimit-nproc=3/" /etc/avahi/avahi-daemon.conf
 
+# Update Homebridge
+echo "Updating Homebridge."
+npm update -g homebridge
+
 cd /root/.homebridge
-file="/root/.homebridge/package.json"
+file="/root/.homebridge/install.sh"
 if [ -f "$file" ]
 then
-	echo "$file found. Going to install additional plugins."
-	npm install -g
-else
-	echo "$file not found. You can create this file to install additional plugins not already included in the docker image."
+	echo "$file found. Executing..."
+	/bin/bash $file
 fi
 
 dbus-daemon --system
