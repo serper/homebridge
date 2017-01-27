@@ -1,0 +1,5 @@
+#!/bin/bash
+
+npm install -g homebridge-homeassistant
+npm install -g homebridge-mqtt
+npm install -g homebridge-websocket
