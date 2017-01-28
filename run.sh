@@ -2,10 +2,6 @@
 
 sed -i "s/rlimit-nproc=3/#rlimit-nproc=3/" /etc/avahi/avahi-daemon.conf
 
-# Update Homebridge
-echo "Updating Homebridge."
-npm update -g homebridge
-
 cd /root/.homebridge
 file="/root/.homebridge/install.sh"
 if [ -f "$file" ]
