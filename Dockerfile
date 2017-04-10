@@ -1,4 +1,4 @@
-FROM nodesource/jessie
+FROM nodesource/trusty
 MAINTAINER Sergio Pérez <sergio@pereznus.es>
 
 ##################################################
